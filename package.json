@@ -1,0 +1,25 @@
+{
+  "name": "practice-design-tokens",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build token-transfomer": "npx token-transformer ./design-token/figma-tokens/tokens.json ./design-token/token-transfomer/output.json",
+    "build style-dictionary": "npx style-dictionary build --config ./design-token/style-dictionary/config.json "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karukan029/practice-design-tokens.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karukan029/practice-design-tokens/issues"
+  },
+  "homepage": "https://github.com/karukan029/practice-design-tokens#readme",
+  "devDependencies": {
+    "style-dictionary": "^3.7.1",
+    "token-transformer": "^0.0.28"
+  }
+}
