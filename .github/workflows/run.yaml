@@ -6,8 +6,6 @@ name: build design tokens
 # 実行用のコンテナ環境
 jobs: 
   setup_node_js:
-  - name: Setup Node.js environment
-    uses: actions/setup-node@v3.5.1
     runs-on: ubuntu-latest
     # 同一のシェルで実行する処理
     steps:
