@@ -14,9 +14,7 @@ jobs:
       with:
         node-version: 18
         cache: npm
-    - run: echo "start setup"
     - run: npm ci
     # - run: npm test
-    - run: npm run build token-transfomer
-    - run: build style-dictionary
-    - run: echo "end setup"
+    - run: npm run build-token-transfomer
+    - run: npm run build-style-dictionary
