@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - main
+name: build design tokens
+# 実行用のコンテナ環境
+job: 
+  setup_node_js:
+  - name: Setup Node.js environment
+    uses: actions/setup-node@v3.5.1
+    runs-on: ubuntu-latest
+    # 同一のシェルで実行する処理
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+        cache: npm
+    - run: echo "start setup"
+    - run: npm ci
+    - run: npm test
+    - run: npm run build token-transfomer
+    - run: build style-dictionary
+    - run: echo "end setup"
