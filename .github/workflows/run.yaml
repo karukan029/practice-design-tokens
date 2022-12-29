@@ -4,7 +4,7 @@ on:
       - main
 name: build design tokens
 # 実行用のコンテナ環境
-job: 
+jobs: 
   setup_node_js:
   - name: Setup Node.js environment
     uses: actions/setup-node@v3.5.1
