@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-token-transfomer": "npx token-transformer ./design-token/figma-tokens/tokens.json ./design-token/token-transfomer/output.json",
-    "build-style-dictionary": "npx style-dictionary build --config ./design-token/style-dictionary/config.json "
+    "build-token-transfomer": "npx token-transformer ./.design-tokens/figma-tokens/tokens.json ./.design-tokens/token-transfomer/output.json",
+    "build-style-dictionary": "npx style-dictionary build --config ./.design-tokens/style-dictionary/config.json "
   },
   "repository": {
     "type": "git",

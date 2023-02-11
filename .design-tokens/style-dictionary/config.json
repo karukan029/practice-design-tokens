@@ -1,5 +1,5 @@
 {
-  "source": ["./design-token/style-dictionary/config.json"],
+  "source": ["./.design-tokens/style-dictionary/config.json"],
   "platforms": {
     "ts": {
       "buildPath": "src/tokens/",
