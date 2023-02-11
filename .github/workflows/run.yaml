@@ -1,20 +1,24 @@
 on:
   push:
-    branches:
-      - main
+    paths:
+      - '.design-tokens/figma-tokens/tokens.json'
+
 name: build design tokens
 # 実行用のコンテナ環境
-jobs: 
+jobs:
   setup_node_js:
     runs-on: ubuntu-latest
     # 同一のシェルで実行する処理
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 18
-        cache: npm
-    - run: npm ci
-    # - run: npm test
-    - run: npm run build-token-transfomer
-    - run: npm run build-style-dictionary
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.14
+          cache: npm
+      - run: npm ci
+      # - run: npm test
+      - run: npm run build-token-transfomer
+      - run: npm run build-style-dictionary
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 🤖 CI build For design tokens
